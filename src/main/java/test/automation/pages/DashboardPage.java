@@ -32,6 +32,12 @@ public class DashboardPage extends PageObjectManager{
 		PageFactory.initElements(driver, this);
 	}
 
+	/**
+	 *
+	 * @param sortby
+	 * @throws NoSuchElementException
+	 * @throws InterruptedException
+	 */
 	public void productsorting(String sortby) throws NoSuchElementException,InterruptedException
 	{
 		Select sorting=new Select(dropdown_sorting);
@@ -39,7 +45,11 @@ public class DashboardPage extends PageObjectManager{
 		Thread.sleep(4000);
 		Assert.assertEquals(sorting.getFirstSelectedOption(), sortby);
 	}
-	
+
+	/**
+	 *
+	 * @param productName
+	 */
 	public void add_Product(List<String> productName)
 	{
 		for(String product: productName) {
@@ -57,7 +67,11 @@ public class DashboardPage extends PageObjectManager{
 		
 		Assert.assertEquals(Integer.parseInt(cart_count.getText()), productName.size());
 	}
-	
+
+	/**
+	 *
+	 * @param productName
+	 */
 	public void remove_Product(List<String> productName)
 	{
     String productcount=cart_count.getText();

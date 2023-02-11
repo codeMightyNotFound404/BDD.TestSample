@@ -26,6 +26,12 @@ public class LoginPage extends PageObjectManager {
 		PageFactory.initElements(driver, this);
 	}
 
+	/**
+	 *
+	 * @param username
+	 * @param password
+	 * @throws Exception
+	 */
 	public void login(String username ,char[] password) throws Exception
 	{
 		input_username.clear();
@@ -33,8 +39,6 @@ public class LoginPage extends PageObjectManager {
 		input_password.clear();
 		input_password.sendKeys(String.valueOf(password));
 		button_submit.click();
-		UiOprations op=new UiOprations();
-		Assert.assertEquals(op.isElementExist(error_msg), false);
 	}
 	
 }

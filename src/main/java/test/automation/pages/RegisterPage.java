@@ -70,21 +70,37 @@ public class RegisterPage extends PageObjectManager {
 	
 	@FindBy(xpath="//button[@value='Refresh']")
 	WebElement refresh;
-	
+
+	/**
+	 *
+	 * @param hobbies
+	 * @throws NoSuchElementException
+	 */
 	public void selectHobbies(List<String> hobbies) throws NoSuchElementException
 	{
 		hobbies.forEach(value->{
 			driver.findElement(By.xpath("//label[contains(text(),'Hobbies')]/following-sibling::div/div/input[@value='"+value+"']")).click();
 		});
 	}
-	
+
+	/**
+	 *
+	 * @param language_value
+	 * @throws NoSuchElementException
+	 * @throws InterruptedException
+	 */
 	public void selectLanguage(String language_value) throws NoSuchElementException, InterruptedException
 	{
 		Language.click();
-		Thread.sleep(2000);
 		driver.findElement(By.xpath("//li/a[@class='ui-corner-all' and contains(text(),'"+language_value+"')]")).click();	
 	}
-	
+
+	/**
+	 *
+	 * @param tabledata
+	 * @throws NoSuchElementException
+	 * @throws InterruptedException
+	 */
 	public void fillform(DataTable tabledata) throws NoSuchElementException, InterruptedException
 	{
 		List<List<String>> str=tabledata.asLists(String.class);
