@@ -22,7 +22,7 @@ Development implimentation .
 <img src="https://github.com/codeMightyNotFound404/BDD.TestSample/blob/main/SupportDocs/Chris_Griffin.png" width="200" height="200"/>
 
 * [Viren Tiwari](https://www.linkedin.com/in/viren-tiwari-734b9b85/)
-* [Script Demo](https://github.com/codeMightyNotFound404/TestAutomation.UISample/blob/main/src/test/java/driverScripts/sample/UISample.java)
+* [Script Demo](https://github.com/codeMightyNotFound404/BDD.TestSample/blob/main/src/test/resource/feature/PlaceOrder.feature)
 
 
 ## References - 
