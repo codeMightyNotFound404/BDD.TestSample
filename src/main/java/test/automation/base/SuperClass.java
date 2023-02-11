@@ -1,21 +1,26 @@
 package test.automation.base;
 
+import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class SuperClass {
 	
 	public  WebDriver driver;
-	
+	public WebDriverWait wait=null;
+
+	/**
+	 * @param type
+	 */
 	public void browserinitialization(String type)
 	{
 		type.toLowerCase();
 		switch(type)
 		{
 		case "chrome":
-			System.setProperty("webdriver.chrome.driver", "src//main//resource//drivers//chromedriver");
-			//WebDriverManager.chromedriver().version("84.0.4147.130").setup();
+			WebDriverManager.chromedriver().version("84.0.4147.130").setup();
 			ChromeOptions options = new ChromeOptions();
 			options.addArguments("start-maximized"); 
 			options.addArguments("enable-automation"); 

@@ -10,6 +10,11 @@ public class PageObjectManager extends SuperClass {
 		   PageFactory.initElements(driver, this);
 	   }
 
+	/**
+	 *
+	 * @param className
+	 * @return
+	 */
 		public PageObjectManager getIntance(String className)
 		{
 			if(className.equalsIgnoreCase("CheckOutPage"))
@@ -20,8 +25,6 @@ public class PageObjectManager extends SuperClass {
 				return new LoginPage();
 			else if(className.equalsIgnoreCase("LoginPage"))
 				return new RegisterPage();
-			else if(className.equalsIgnoreCase("RegisterPage"))
-				return new YourCard();
 			else
 				return null;
 		}

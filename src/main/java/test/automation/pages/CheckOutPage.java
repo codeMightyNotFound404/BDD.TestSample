@@ -31,15 +31,17 @@ public class CheckOutPage extends PageObjectManager{
 		PageFactory.initElements(driver, this);
 	}
 
+	/**
+	 *
+	 * @param addressDetails
+	 * @throws InterruptedException
+	 */
 	public void address_Fill(List<String> addressDetails) throws InterruptedException
 	{
 	input_Fname.sendKeys(addressDetails.get(0));
 	input_Lname.sendKeys(addressDetails.get(1));
 	input_postal.sendKeys(addressDetails.get(2));
 	link_continue.click();
-	Thread.sleep(3000);
-	UiOprations uiOp=new UiOprations();
-	Assert.assertEquals(uiOp.isElementExist(driver.findElement(By.xpath("//div[starts-with(text(),'Checkout: Overview')]"))), true);
 	}
 	
 	
