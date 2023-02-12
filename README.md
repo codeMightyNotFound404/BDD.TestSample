@@ -13,7 +13,7 @@ Development implimentation .
 
 <object data="https://github.com/codeMightyNotFound404/TestAutomation.UISample/blob/main/src/test/resource/APIDoc/Document%2012.pdf" type="application/pdf" width="700px" height="700px">
     <embed src="https://github.com/codeMightyNotFound404/TestAutomation.UISample/blob/main/src/test/resource/APIDoc/Document%2012.pdf">
-        <p>Here is the Sample API Doc for reference <a href="https://github.com/codeMightyNotFound404/TestAutomation.UISample/blob/main/src/test/resource/APIDoc/Document%2012.pdf">Download PDF</a>.</p>
+        <p>Here is the Sample API Doc for reference <a href="https://github.com/codeMightyNotFound404/BDD.TestSample/blob/main/SupportDocs/InitialTAFRequirementSpec.pdf">Framework SRS PDF</a>.</p>
     </embed>
 </object>
 
